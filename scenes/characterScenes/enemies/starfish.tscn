@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dth0el8r1y2l3"]
+
+[ext_resource type="Script" uid="uid://burjnvo30tr3f" path="res://CompetitiveProgramming/Enemies/starfish.gd" id="1_flaoc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_flaoc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r27c5"]
+radius = 24.0
+
+[node name="Starfish" type="CharacterBody2D" unique_id=513812014]
+script = ExtResource("1_flaoc")
+
+[node name="StarfishSprite" type="Sprite2D" parent="." unique_id=1655497010]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1983833036]
+shape = SubResource("CircleShape2D_flaoc")
+
+[node name="DetectionArea" type="Area2D" parent="." unique_id=1812838307]
+
+[node name="DetectionShape" type="CollisionShape2D" parent="DetectionArea" unique_id=1414765354]
+shape = SubResource("CircleShape2D_r27c5")
+
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]

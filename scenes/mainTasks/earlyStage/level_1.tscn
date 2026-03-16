@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cna4v0scjo505"]
+
+[ext_resource type="Texture2D" uid="uid://cx11xefciagsh" path="res://assets/art/parrotfish/parrotfish.png" id="1_5tjll"]
+[ext_resource type="PackedScene" uid="uid://cd7xkb4q3ypey" path="res://scenes/characterScenes/mainCharacters/S.H.A.R.K.tscn" id="2_wgi3y"]
+[ext_resource type="Script" uid="uid://cw63le3dlu5y2" path="res://CompetitiveProgramming/Enemies/Spawners/starfish_spawner.gd" id="3_8crak"]
+[ext_resource type="Texture2D" uid="uid://ogww41lgdewb" path="res://scenes/almostUseless/don'tGoonToThis/icon.svg" id="4_2pld6"]
+
+[node name="Level1" type="Node2D" unique_id=1576352969]
+metadata/_edit_lock_ = true
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1938731079]
+offset_left = -19.0
+offset_top = -52.0
+offset_right = 1136.0
+offset_bottom = 865.0
+texture = ExtResource("1_5tjll")
+metadata/_edit_lock_ = true
+
+[node name="SHARK" parent="." unique_id=1527591102 instance=ExtResource("2_wgi3y")]
+position = Vector2(450, 389)
+
+[node name="StarfishSpawner" type="Node2D" parent="." unique_id=1308658055]
+process_mode = 4
+position = Vector2(631, 338)
+script = ExtResource("3_8crak")
+
+[node name="Timer" type="Timer" parent="StarfishSpawner" unique_id=59023599]
+process_mode = 3
+wait_time = 3.0
+autostart = true
+
+[node name="Sprite2D" type="Sprite2D" parent="StarfishSpawner" unique_id=1828685908]
+position = Vector2(-1, 0)
+texture = ExtResource("4_2pld6")
+metadata/_edit_lock_ = true
+
+[connection signal="timeout" from="StarfishSpawner/Timer" to="StarfishSpawner" method="_on_timer_timeout"]

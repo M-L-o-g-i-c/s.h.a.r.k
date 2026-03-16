@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cd7xkb4q3ypey"]
+
+[ext_resource type="Script" uid="uid://cp13apb4baerv" path="res://CompetitiveProgramming/characterCode/s.h.a.r.k.gd" id="1_dfyto"]
+[ext_resource type="Texture2D" uid="uid://bb0nfxhthepod" path="res://assets/art/import/char/Shark.png" id="2_hi0ta"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c8wcv"]
+
+[node name="SHARK" type="CharacterBody2D" unique_id=1527591102]
+script = ExtResource("1_dfyto")
+
+[node name="S_Sprite" type="Sprite2D" parent="." unique_id=889460361]
+scale = Vector2(2, 2)
+texture = ExtResource("2_hi0ta")
+
+[node name="S_Shape" type="CollisionShape2D" parent="." unique_id=1391329772]
+rotation = 1.5707964
+scale = Vector2(2, 2)
+shape = SubResource("CapsuleShape2D_c8wcv")
+
+[node name="SharkCamera" type="Camera2D" parent="." unique_id=36773743]
+zoom = Vector2(2, 2)

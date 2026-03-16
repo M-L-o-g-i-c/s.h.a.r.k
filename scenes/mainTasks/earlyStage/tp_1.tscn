@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dacfv20i05asy"]
+
+[ext_resource type="Script" uid="uid://daw1b3qo2tqtc" path="res://CompetitiveProgramming/tasks/tp_1.gd" id="1_y2jup"]
+[ext_resource type="Texture2D" uid="uid://ci0kw5iwyu75r" path="res://assets/art/Hermit_crab_animation_loop/Hermit_crab.png" id="2_b1e0x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_efte3"]
+size = Vector2(27.5, 24)
+
+[node name="Tp1" type="Area2D" unique_id=838727701]
+script = ExtResource("1_y2jup")
+
+[node name="Tp1Sprite2D" type="Sprite2D" parent="." unique_id=187312234]
+position = Vector2(0, 0.5)
+scale = Vector2(1, 1.0208334)
+texture = ExtResource("2_b1e0x")
+
+[node name="Tp1CollisionShape" type="CollisionShape2D" parent="." unique_id=683786851]
+position = Vector2(-0.5, 2)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_efte3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

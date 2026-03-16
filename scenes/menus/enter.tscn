@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://co68u27n0qoel"]
+
+[ext_resource type="Script" uid="uid://3bkd220t0ydt" path="res://CompetitiveProgramming/mains/cp/enter.gd" id="1_tpb2l"]
+
+[node name="Enter" type="Control" unique_id=1579165719]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tpb2l")
+
+[node name="StartButton" type="Button" parent="." unique_id=624557104]
+layout_mode = 0
+offset_left = 447.0
+offset_top = 158.0
+offset_right = 732.0
+offset_bottom = 250.0
+text = "START"
+
+[node name="QuitButton" type="Button" parent="." unique_id=1991344218]
+layout_mode = 0
+offset_left = 527.0
+offset_top = 374.0
+offset_right = 666.0
+offset_bottom = 456.0
+text = "QUIT"
+
+[connection signal="button_down" from="StartButton" to="." method="_on_start_button_button_down"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
