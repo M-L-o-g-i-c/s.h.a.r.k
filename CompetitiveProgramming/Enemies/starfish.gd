@@ -35,7 +35,12 @@ var is_caught_in4k : bool = false
 
 
 func _on_detection_area_body_entered(body):
-	is_caught_in4k = true
+	if body is Shark:
+
+
+
+		print("entered")
+		is_caught_in4k = true
 
 
 
@@ -44,7 +49,9 @@ func _on_detection_area_body_entered(body):
 
 
 func _on_detection_area_body_exited(body):
-	is_caught_in4k = false
+	if body is Shark:
+		print("exited")
+		is_caught_in4k = false
 	
 	
 func _process(_par : float):

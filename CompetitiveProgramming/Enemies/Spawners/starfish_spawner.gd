@@ -26,7 +26,9 @@ const MAX_SPAWN : int = 10
 
 
 func _on_timer_timeout():
-	spawned_starfish += 1;
-	var starfish_instance : Node2D = starfish_scene.instantiate()
-	starfish_instance.position = position + Vector2(randi_range(-150, 150), randi_range(-150, 150))
-	get_parent().add_child(starfish_instance)
+	if(spawned_starfish <= MAX_SPAWN):
+		spawned_starfish += 1;
+		var starfish_instance : Node2D = starfish_scene.instantiate()
+		starfish_instance.position = position + Vector2(randi_range(-150, 150), randi_range(-150, 150))
+	
+		get_parent().add_child(starfish_instance)
