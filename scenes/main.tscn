@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ve0wl3q3nx30"]
 
-[ext_resource type="Texture2D" uid="uid://6scssw50nfam" path="res://assets/art/coral reef/coral reef.png" id="1_0wfyh"]
+[ext_resource type="Texture2D" uid="uid://6scssw50nfam" path="res://assets/art/created_assets/coral reef/coral reef.png" id="1_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://cd7xkb4q3ypey" path="res://scenes/characterScenes/mainCharacters/S.H.A.R.K.tscn" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://dacfv20i05asy" path="res://scenes/mainTasks/earlyStage/tp_1.tscn" id="1_sugp2"]
 

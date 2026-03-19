@@ -6,6 +6,7 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c8wcv"]
 
 [node name="SHARK" type="CharacterBody2D" unique_id=1527591102]
+light_mask = 357
 script = ExtResource("1_dfyto")
 
 [node name="S_Sprite" type="Sprite2D" parent="." unique_id=889460361]
@@ -19,3 +20,12 @@ shape = SubResource("CapsuleShape2D_c8wcv")
 
 [node name="SharkCamera" type="Camera2D" parent="." unique_id=36773743]
 zoom = Vector2(2, 2)
+
+[node name="DashTime" type="Timer" parent="." unique_id=1131164404]
+editor_description = "This is our player"
+wait_time = 0.5
+one_shot = true
+
+[node name="DashCooldownTime" type="Timer" parent="." unique_id=1543323227]
+wait_time = 2.0
+one_shot = true

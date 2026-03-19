@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dacfv20i05asy"]
 
 [ext_resource type="Script" uid="uid://daw1b3qo2tqtc" path="res://CompetitiveProgramming/tasks/tp_1.gd" id="1_y2jup"]
-[ext_resource type="Texture2D" uid="uid://ci0kw5iwyu75r" path="res://assets/art/Hermit_crab_animation_loop/Hermit_crab.png" id="2_b1e0x"]
+[ext_resource type="Texture2D" uid="uid://ci0kw5iwyu75r" path="res://assets/art/created_assets/random/Hermit_crab_animation_loop/Hermit_crab.png" id="2_b1e0x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_efte3"]
 size = Vector2(27.5, 24)

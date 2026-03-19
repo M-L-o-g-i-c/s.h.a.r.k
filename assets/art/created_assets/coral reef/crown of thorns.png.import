@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6scssw50nfam"
-path="res://.godot/imported/coral reef.png-b8fee3460ffb4dcd43bf3783d692c5d4.ctex"
+uid="uid://csknbdggeoj73"
+path="res://.godot/imported/crown of thorns.png-0c64b3a82703f535ab21c73c4ed49053.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/coral reef/coral reef.png"
-dest_files=["res://.godot/imported/coral reef.png-b8fee3460ffb4dcd43bf3783d692c5d4.ctex"]
+source_file="res://assets/art/created_assets/coral reef/crown of thorns.png"
+dest_files=["res://.godot/imported/crown of thorns.png-0c64b3a82703f535ab21c73c4ed49053.ctex"]
 
 [params]
 

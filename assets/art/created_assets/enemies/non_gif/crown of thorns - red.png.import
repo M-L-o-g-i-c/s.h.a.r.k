@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ci0kw5iwyu75r"
-path="res://.godot/imported/Hermit_crab.png-42c5e0d00274fea66a75adcfb77c0d1c.ctex"
+uid="uid://c8ltt203qdys2"
+path="res://.godot/imported/crown of thorns - red.png-ca1a97b2ff68e3b3c2606fce0a81898f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/Hermit_crab_animation_loop/Hermit_crab.png"
-dest_files=["res://.godot/imported/Hermit_crab.png-42c5e0d00274fea66a75adcfb77c0d1c.ctex"]
+source_file="res://assets/art/created_assets/enemies/non_gif/crown of thorns - red.png"
+dest_files=["res://.godot/imported/crown of thorns - red.png-ca1a97b2ff68e3b3c2606fce0a81898f.ctex"]
 
 [params]
 

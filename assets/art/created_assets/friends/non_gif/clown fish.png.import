@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://calqdx2apl54v"
-path="res://.godot/imported/boost.png-a68798c3430813d4eb715b6d7d5715b2.ctex"
+uid="uid://b5ptp61h8noxw"
+path="res://.godot/imported/clown fish.png-6e6b98875d36bb347df805aab328a92b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/myOwn/boost.png"
-dest_files=["res://.godot/imported/boost.png-a68798c3430813d4eb715b6d7d5715b2.ctex"]
+source_file="res://assets/art/created_assets/friends/non_gif/clown fish.png"
+dest_files=["res://.godot/imported/clown fish.png-6e6b98875d36bb347df805aab328a92b.ctex"]
 
 [params]
 

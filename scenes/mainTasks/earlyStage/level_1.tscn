@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://cna4v0scjo505"]
 
-[ext_resource type="Texture2D" uid="uid://cx11xefciagsh" path="res://assets/art/parrotfish/parrotfish.png" id="1_5tjll"]
+[ext_resource type="Script" uid="uid://cmrqp4bdxrvpw" path="res://CompetitiveProgramming/tasks/level_1.gd" id="1_4nq7p"]
+[ext_resource type="Texture2D" uid="uid://cx11xefciagsh" path="res://assets/art/created_assets/random/parrotfish/parrotfish.png" id="1_5tjll"]
 [ext_resource type="PackedScene" uid="uid://cd7xkb4q3ypey" path="res://scenes/characterScenes/mainCharacters/S.H.A.R.K.tscn" id="2_wgi3y"]
 [ext_resource type="Script" uid="uid://cw63le3dlu5y2" path="res://CompetitiveProgramming/Enemies/Spawners/starfish_spawner.gd" id="3_8crak"]
 [ext_resource type="Texture2D" uid="uid://ogww41lgdewb" path="res://scenes/almostUseless/don'tGoonToThis/icon.svg" id="4_2pld6"]
 
 [node name="Level1" type="Node2D" unique_id=1576352969]
+script = ExtResource("1_4nq7p")
 metadata/_edit_lock_ = true
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1938731079]

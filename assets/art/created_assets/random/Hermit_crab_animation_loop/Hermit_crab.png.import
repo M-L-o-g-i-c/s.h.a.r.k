@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cx11xefciagsh"
-path="res://.godot/imported/parrotfish.png-42e5aea9341c3f2a8dab0b3696dfdb49.ctex"
+uid="uid://ci0kw5iwyu75r"
+path="res://.godot/imported/Hermit_crab.png-bc7c5360b756e1f2bf07f23159aaf0c0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/parrotfish/parrotfish.png"
-dest_files=["res://.godot/imported/parrotfish.png-42e5aea9341c3f2a8dab0b3696dfdb49.ctex"]
+source_file="res://assets/art/created_assets/random/Hermit_crab_animation_loop/Hermit_crab.png"
+dest_files=["res://.godot/imported/Hermit_crab.png-bc7c5360b756e1f2bf07f23159aaf0c0.ctex"]
 
 [params]
 
