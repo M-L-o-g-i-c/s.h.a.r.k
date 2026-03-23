@@ -8,6 +8,8 @@
 radius = 256.0
 
 [node name="Starfish" type="CharacterBody2D" unique_id=513812014]
+collision_layer = 4
+collision_mask = 79
 script = ExtResource("1_flaoc")
 
 [node name="StarfishSprite" type="Sprite2D" parent="." unique_id=1655497010]
@@ -16,6 +18,8 @@ script = ExtResource("1_flaoc")
 shape = SubResource("CircleShape2D_flaoc")
 
 [node name="DetectionArea" type="Area2D" parent="." unique_id=1812838307]
+collision_layer = 4
+collision_mask = 2
 
 [node name="DetectionShape" type="CollisionShape2D" parent="DetectionArea" unique_id=1414765354]
 shape = SubResource("CircleShape2D_r27c5")

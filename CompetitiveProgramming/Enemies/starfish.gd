@@ -20,7 +20,9 @@ extends CharacterBody2D
 
 
 
-const STARFISH_HEALTH : int = 200
+class_name Starfish
+
+var STARFISH_HEALTH : int = randi_range(100, 200)
 const STARFISH_SPEED : int = 50
 const STARFISH_ASSETS : Array[Resource]  = [
 	preload("res://assets/art/created_assets/enemies/non_gif/crown of thorns - purple.png"),
@@ -32,9 +34,7 @@ const STARFISH_ASSETS : Array[Resource]  = [
 
 
 
-
-
-
+var starfish_health = STARFISH_HEALTH
 
 
 

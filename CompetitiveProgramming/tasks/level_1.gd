@@ -44,4 +44,4 @@ var player_bodycount : int = 0
 
 
 func _ready():
-	pass
+	player_bodycount = 0

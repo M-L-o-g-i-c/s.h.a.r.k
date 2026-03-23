@@ -50,8 +50,10 @@ signal coin_spent()
 func add_coin(increment : int):
 	coin_count += increment
 	#emit signal
-	coin_earned
 	
 	
 func spend_coin(decrement : int):
 	coin_count -= decrement
+	
+	
+	

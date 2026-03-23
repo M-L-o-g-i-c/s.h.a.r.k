@@ -4,28 +4,57 @@
 [ext_resource type="Texture2D" uid="uid://bb0nfxhthepod" path="res://assets/art/import/char/Shark.png" id="2_hi0ta"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c8wcv"]
+radius = 4.0
+height = 13.333334
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hi0ta"]
+radius = 8.0
 
 [node name="SHARK" type="CharacterBody2D" unique_id=1527591102]
-light_mask = 357
+collision_layer = 2
+collision_mask = 373
 script = ExtResource("1_dfyto")
 
 [node name="S_Sprite" type="Sprite2D" parent="." unique_id=889460361]
-scale = Vector2(2, 2)
+scale = Vector2(0.75, 0.75)
 texture = ExtResource("2_hi0ta")
 
 [node name="S_Shape" type="CollisionShape2D" parent="." unique_id=1391329772]
 rotation = 1.5707964
-scale = Vector2(2, 2)
+scale = Vector2(0.75, 0.75)
 shape = SubResource("CapsuleShape2D_c8wcv")
 
 [node name="SharkCamera" type="Camera2D" parent="." unique_id=36773743]
-zoom = Vector2(2, 2)
+zoom = Vector2(5, 5)
 
 [node name="DashTime" type="Timer" parent="." unique_id=1131164404]
 editor_description = "This is our player"
-wait_time = 0.5
+wait_time = 0.2
 one_shot = true
 
 [node name="DashCooldownTime" type="Timer" parent="." unique_id=1543323227]
-wait_time = 2.0
+wait_time = 1.5
 one_shot = true
+
+[node name="BoostAttack" type="Area2D" parent="." unique_id=256457663]
+position = Vector2(-2, 0)
+collision_layer = 2048
+collision_mask = 4
+
+[node name="BoostAttackRange" type="CollisionShape2D" parent="BoostAttack" unique_id=1366723003]
+position = Vector2(3, -1)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_hi0ta")
+
+[node name="Calories" type="TextureProgressBar" parent="." unique_id=291758626]
+offset_right = 40.0
+offset_bottom = 40.0
+max_value = 5000.0
+value = 5000.0
+
+[node name="HungerTimer" type="Timer" parent="." unique_id=29691011]
+
+[connection signal="timeout" from="DashTime" to="." method="_on_dash_time_timeout"]
+[connection signal="timeout" from="DashCooldownTime" to="." method="_on_dash_cooldown_time_timeout"]
+[connection signal="body_entered" from="BoostAttack" to="." method="_on_boost_attack_body_entered"]
+[connection signal="timeout" from="HungerTimer" to="." method="_on_hunger_timer_timeout"]
