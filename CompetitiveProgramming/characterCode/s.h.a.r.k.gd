@@ -28,24 +28,6 @@ var is_flipped : bool = false
 # we actually don't need this but clarity > conciseness 
 var parent : Node2D = get_parent()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 func basic_movement(direction : Vector2):
 	velocity = direction * SPEED
 	if direction.x < 0 and is_flipped:
@@ -55,6 +37,7 @@ func basic_movement(direction : Vector2):
 	elif direction.x > 0 and not is_flipped:
 		is_flipped = not is_flipped
 		$S_Sprite.flip_h = true
+		
 		# flip right
 
 
@@ -66,32 +49,7 @@ func basic_movement(direction : Vector2):
 
 
 
-
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-
 # below is the code for our boosting functions
-
-
-
-
-
-
-
 
 var is_boosting : bool = false
 
@@ -104,25 +62,11 @@ var can_boost : bool = true
 const BOOST_MULTIPLIER : int = 3
 
 
-
-
-
-
-
-
-
-
-
 func boost():
 	if Input.is_action_pressed("boost") and can_boost:
 		is_boosting = true
 		can_boost = false
 		$DashTime.start()
-
-		
-
-
-
 
 
 func _on_dash_time_timeout():
@@ -131,8 +75,16 @@ func _on_dash_time_timeout():
 
 
 
+
+
+
+
+
+
+
 func _on_dash_cooldown_time_timeout():
 	can_boost = true
+	
 	
 	
 var hunger_pause : bool = false;
@@ -160,18 +112,22 @@ func sub_calories():
 		if($Calories.value <= 0): get_tree().change_scene_to_file("res://scenes/menus/ggs.tscn")
 		
 		
+#ignore hunger for now
 
 func _process(_par : float):
 	basic_movement(Input.get_vector("left", "right", "up", "down"))
 	boost()
 	if is_boosting: velocity *= BOOST_MULTIPLIER
-	sub_calories()
 	move_and_slide()
+	# add sub calories later
 
 
-@onready var starfish_ins : Starfish = get_node("../starfish")
 
 func _on_boost_attack_body_entered(body : Node2D):
-	if body is Starfish and is_boosting: is_boosting = false
-	
+	if body is Starfish and is_boosting:
+		is_boosting = false
+		if(body.has_method("get_killed")):
+			body.get_killed()
+		
+
 		

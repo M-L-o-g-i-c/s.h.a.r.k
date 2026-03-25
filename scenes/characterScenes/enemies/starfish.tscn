@@ -3,12 +3,13 @@
 [ext_resource type="Script" uid="uid://burjnvo30tr3f" path="res://CompetitiveProgramming/Enemies/starfish.gd" id="1_flaoc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_flaoc"]
+radius = 16.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_r27c5"]
 radius = 256.0
 
 [node name="Starfish" type="CharacterBody2D" unique_id=513812014]
-collision_layer = 4
+collision_layer = 2048
 collision_mask = 79
 script = ExtResource("1_flaoc")
 
@@ -22,6 +23,7 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="DetectionShape" type="CollisionShape2D" parent="DetectionArea" unique_id=1414765354]
+visible = false
 shape = SubResource("CircleShape2D_r27c5")
 
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]

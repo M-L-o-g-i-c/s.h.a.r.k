@@ -98,3 +98,8 @@ func _process(_par : float):
 		move_and_slide()
 		look_at(shark_position)
 		#look at and follow player if player is detected
+
+func get_killed():
+	print("he beat the shit out of me")
+	queue_free()
+	#basically this means the enemy got cooked
