@@ -25,7 +25,7 @@ const MAX_SPAWN : int = 10
 @export var spawned_starfish : int = 0
 
 
-func _on_timer_timeout():
+func _on_spawn_timeout():
 	if(spawned_starfish <= MAX_SPAWN):
 		spawned_starfish += 1;
 		var starfish_instance : Node2D = starfish_scene.instantiate()

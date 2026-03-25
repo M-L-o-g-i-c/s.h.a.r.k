@@ -127,6 +127,8 @@ func _on_boost_attack_body_entered(body : Node2D):
 	if body is Starfish and is_boosting:
 		is_boosting = false
 		if(body.has_method("get_killed")):
+			Game.starfish_killed += 1
+			print(Game.starfish_killed)
 			body.get_killed()
 		
 

@@ -15,6 +15,10 @@ run/main_scene="uid://co68u27n0qoel"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://scenes/almostUseless/don'tGoonToThis/icon.svg"
 
+[autoload]
+
+Game="*uid://d2rswmseghtus"
+
 [display]
 
 window/size/viewport_width=3840

@@ -21,6 +21,10 @@ extends Node
 
 
 var coin_count : int = 0
+var starfish_killed : int = 0
+var lionfish_killed : int = 0
+const STARFISH_TARGET : int = 6
+const LIONFISH_TARGET : int = 7
 
 signal coin_earned()
 signal coin_gained()
