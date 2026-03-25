@@ -1,3 +1,6 @@
 [gd_scene format=3 uid="uid://bjixc2ksmrt17"]
 
+[ext_resource type="Script" uid="uid://bhlwrrjrr6pfe" path="res://scenes/mainTasks/earlyStage/level_2.gd" id="1_0fqpd"]
+
 [node name="Level2" type="Node2D" unique_id=1064622894]
+script = ExtResource("1_0fqpd")

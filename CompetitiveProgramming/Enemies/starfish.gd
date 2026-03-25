@@ -23,7 +23,7 @@ extends CharacterBody2D
 class_name Starfish
 
 var STARFISH_HEALTH : int = randi_range(100, 200)
-const STARFISH_SPEED : int = 50
+var starfish_speed : int = randi_range(20, 80)
 const STARFISH_ASSETS : Array[Resource]  = [
 	preload("res://assets/art/created_assets/enemies/non_gif/crown of thorns - purple.png"),
  	preload("res://assets/art/created_assets/enemies/non_gif/crown of thorns - red.png"),
@@ -94,7 +94,7 @@ func _process(_par : float):
 	var shark_position = player_instance.position
 	var target_position = (shark_position - position).normalized()
 	if(is_caught_in4k):
-		velocity = target_position * STARFISH_SPEED
+		velocity = target_position * starfish_speed
 		move_and_slide()
 		look_at(shark_position)
 		#look at and follow player if player is detected
