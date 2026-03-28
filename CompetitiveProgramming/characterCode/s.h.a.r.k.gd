@@ -130,6 +130,8 @@ func _on_boost_attack_body_entered(body : Node2D):
 			Game.starfish_killed += 1
 			print(Game.starfish_killed)
 			body.get_killed()
+			if Game.starfish_killed==Game.STARFISH_TARGET:
+				get_tree().change_scene_to_file("res://scenes/main.tscn")
 		
 
 		

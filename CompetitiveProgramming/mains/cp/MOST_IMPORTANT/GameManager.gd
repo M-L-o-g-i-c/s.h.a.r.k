@@ -24,7 +24,7 @@ var coin_count : int = 0
 var starfish_killed : int = 0
 var lionfish_killed : int = 0
 const STARFISH_TARGET : int = 6
-const LIONFISH_TARGET : int = 7
+const LIONFISH_TARGET : int =0
 
 signal coin_earned()
 signal coin_gained()
@@ -44,10 +44,10 @@ signal coin_spent()
 
 
 
+var levels_won : Array[bool] = [true, false, false, false, false, false, false]
 
 
-
-
+# checks each individual level to see if they are enterable (no reentry)
 
 
 

@@ -33,5 +33,5 @@ func _process(delta: float) -> void:
 	
 
 
-func _on_body_entered(body: Node2D) -> void:
+func _on_body_entered(_bd : Node2D):
 	get_tree().call_deferred("change_scene_to_file", "res://scenes/mainTasks/earlyStage/level_1.tscn")

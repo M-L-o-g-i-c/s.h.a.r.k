@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://0gob41x81xg"]
+
+[node name="ReefShop" type="Control" unique_id=197530430]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 41.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=528733859]
+
+[node name="CoralCoins" type="Label" parent="UI" unique_id=574677597]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="ShopPanels" type="Panel" parent="UI" unique_id=704191941]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PanelLabel" type="Label" parent="UI/ShopPanels" unique_id=530140585]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="UI/ShopPanels" unique_id=1859084595]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 158.0
+offset_right = 360.0
+offset_bottom = 198.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/ShopPanels/ScrollContainer" unique_id=1825174369]
+layout_mode = 2
