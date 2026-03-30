@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://d0lrffhuauqrq"]
+
+[ext_resource type="Texture2D" uid="uid://cdb5xov8hd44u" path="res://assets/art/created_assets/enemies/non_gif/lionfish.png" id="1_5t2d2"]
+[ext_resource type="Script" uid="uid://dtl0ivlekagdr" path="res://CompetitiveProgramming/Enemies/lionfish.gd" id="1_gdaa0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gdaa0"]
+size = Vector2(48, 32)
+
+[node name="Lionfish" type="CharacterBody2D" unique_id=161254378]
+script = ExtResource("1_gdaa0")
+
+[node name="LionfishSprite" type="Sprite2D" parent="." unique_id=727140869]
+texture = ExtResource("1_5t2d2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=101585716]
+shape = SubResource("RectangleShape2D_gdaa0")

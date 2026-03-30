@@ -1,10 +1,40 @@
 [gd_scene format=3 uid="uid://cna4v0scjo505"]
 
+[ext_resource type="Texture2D" uid="uid://ci31ghouubk4l" path="res://assets/art/import/tiles/Atlantis/Atlantis/Screenshot (286).png" id="1_2pld6"]
 [ext_resource type="PackedScene" uid="uid://cd7xkb4q3ypey" path="res://scenes/characterScenes/mainCharacters/S.H.A.R.K.tscn" id="1_8crak"]
 [ext_resource type="Script" uid="uid://cw63le3dlu5y2" path="res://CompetitiveProgramming/Enemies/Spawners/starfish_spawner.gd" id="2_2pld6"]
+[ext_resource type="Texture2D" uid="uid://debg48enaj45p" path="res://assets/art/import/tiles/Atlantis/Atlantis/Screenshot (285).png" id="2_3tc85"]
 [ext_resource type="Texture2D" uid="uid://ogww41lgdewb" path="res://scenes/almostUseless/don'tGoonToThis/icon.svg" id="3_4nq7p"]
+[ext_resource type="Texture2D" uid="uid://dbxe64mgp7w75" path="res://assets/art/import/tiles/Atlantis/Atlantis/Screenshot (289).png" id="3_itpwu"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2pld6"]
+texture = ExtResource("1_2pld6")
+
+[sub_resource type="TileSet" id="TileSet_4nq7p"]
+sources/0 = SubResource("TileSetAtlasSource_2pld6")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g2tu2"]
+texture = ExtResource("2_3tc85")
+
+[sub_resource type="TileSet" id="TileSet_5n1nj"]
+sources/0 = SubResource("TileSetAtlasSource_g2tu2")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k0rs3"]
+texture = ExtResource("3_itpwu")
+
+[sub_resource type="TileSet" id="TileSet_i0ovt"]
+sources/0 = SubResource("TileSetAtlasSource_k0rs3")
 
 [node name="Level1" type="Node2D" unique_id=573835046]
+
+[node name="Layer1" type="TileMapLayer" parent="." unique_id=471640309]
+tile_set = SubResource("TileSet_4nq7p")
+
+[node name="Layer2" type="TileMapLayer" parent="." unique_id=728958408]
+tile_set = SubResource("TileSet_5n1nj")
+
+[node name="Layer3" type="TileMapLayer" parent="." unique_id=812533297]
+tile_set = SubResource("TileSet_i0ovt")
 
 [node name="SHARK" parent="." unique_id=1527591102 instance=ExtResource("1_8crak")]
 
@@ -17,5 +47,11 @@ autostart = true
 
 [node name="Spawner" type="Sprite2D" parent="StarfishSpawner" unique_id=278694988]
 texture = ExtResource("3_4nq7p")
+
+[node name="LionfishSpawner" type="Node2D" parent="." unique_id=1312802400]
+
+[node name="LT" type="Timer" parent="LionfishSpawner" unique_id=1020864630]
+
+[node name="Spawner1" type="Sprite2D" parent="LionfishSpawner" unique_id=2017638345]
 
 [connection signal="timeout" from="StarfishSpawner/Spawn" to="StarfishSpawner" method="_on_spawn_timeout"]

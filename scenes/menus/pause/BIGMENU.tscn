@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://n35nkovcrk67"]
+
+[ext_resource type="Texture2D" uid="uid://brqgiabuar8k3" path="res://assets/art/created_assets/coral reef/starting page background.png" id="1_b1oor"]
+[ext_resource type="Script" uid="uid://dgakpgmnuu32l" path="res://CompetitiveProgramming/menus/ourmenu.gd" id="1_tlau0"]
+[ext_resource type="Texture2D" uid="uid://du063bx1yn5qc" path="res://assets/art/created_assets/bigui/start button.png" id="2_tlau0"]
+[ext_resource type="Texture2D" uid="uid://ded7ytelo2eg6" path="res://assets/art/created_assets/bigui/quit button.png" id="3_50fci"]
+
+[node name="ENT" type="Control" unique_id=1239544115]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tlau0")
+
+[node name="BG" type="TextureRect" parent="." unique_id=386832856]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_b1oor")
+stretch_mode = 6
+
+[node name="Credits" type="Button" parent="." unique_id=1769316140]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -50.0
+offset_right = 100.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="a" type="TextureRect" parent="." unique_id=121828302]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -530.0
+offset_top = -201.00002
+offset_right = -209.99997
+offset_bottom = -21.000015
+grow_horizontal = 2
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("2_tlau0")
+
+[node name="b" type="TextureRect" parent="." unique_id=1728666085]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(3.5, 3.5)
+
+[node name="c" type="TextureRect" parent="." unique_id=1489576134]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -530.0
+offset_top = -482.0
+offset_right = -209.99997
+offset_bottom = -302.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("3_50fci")
+
+[node name="Enter" type="Button" parent="." unique_id=508620719]
+self_modulate = Color(0.57254905, 0.5058824, 0.39607844, 1)
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -143.0
+offset_right = 141.0
+offset_bottom = 104.0
+grow_horizontal = 2
+
+[node name="Quit" type="Button" parent="." unique_id=951576529]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -139.0
+offset_top = -104.0
+offset_right = 141.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Enter" to="." method="_on_enter_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
