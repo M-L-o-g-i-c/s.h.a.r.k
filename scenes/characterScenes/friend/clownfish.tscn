@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b8j2ra51ydxu5"]
+
+[ext_resource type="Script" uid="uid://bgpmj6ktsbein" path="res://CompetitiveProgramming/other/friend/clownfish.gd" id="1_sfpod"]
+[ext_resource type="Texture2D" uid="uid://b5ptp61h8noxw" path="res://assets/art/created_assets/friends/non_gif/clown fish.png" id="2_dl5go"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8g0iu"]
+
+[node name="Clownfish" type="CharacterBody2D" unique_id=1298722485]
+script = ExtResource("1_sfpod")
+
+[node name="Clown" type="CollisionShape2D" parent="." unique_id=1187535693]
+shape = SubResource("CircleShape2D_8g0iu")
+
+[node name="ClownfishSprite" type="Sprite2D" parent="." unique_id=65306246]
+texture = ExtResource("2_dl5go")

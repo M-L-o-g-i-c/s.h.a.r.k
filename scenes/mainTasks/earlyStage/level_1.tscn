@@ -2,10 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://ci31ghouubk4l" path="res://assets/art/import/tiles/Atlantis/Atlantis/Screenshot (286).png" id="1_2pld6"]
 [ext_resource type="PackedScene" uid="uid://cd7xkb4q3ypey" path="res://scenes/characterScenes/mainCharacters/S.H.A.R.K.tscn" id="1_8crak"]
-[ext_resource type="Script" uid="uid://cw63le3dlu5y2" path="res://CompetitiveProgramming/Enemies/Spawners/starfish_spawner.gd" id="2_2pld6"]
 [ext_resource type="Texture2D" uid="uid://debg48enaj45p" path="res://assets/art/import/tiles/Atlantis/Atlantis/Screenshot (285).png" id="2_3tc85"]
-[ext_resource type="Texture2D" uid="uid://ogww41lgdewb" path="res://scenes/almostUseless/don'tGoonToThis/icon.svg" id="3_4nq7p"]
 [ext_resource type="Texture2D" uid="uid://dbxe64mgp7w75" path="res://assets/art/import/tiles/Atlantis/Atlantis/Screenshot (289).png" id="3_itpwu"]
+[ext_resource type="Script" uid="uid://i1pa42fi260k" path="res://CompetitiveProgramming/other/nemo_spawner.gd" id="8_5n1nj"]
+[ext_resource type="Script" uid="uid://buwkgrf6rw3yc" path="res://scenes/BUGUANLE/starfish_spawner.gd" id="8_g2tu2"]
+[ext_resource type="Script" uid="uid://b0a50uaejlneq" path="res://scenes/BUGUANLE/lionfish_spawner.gd" id="8_k0rs3"]
+[ext_resource type="PackedScene" uid="uid://b8j2ra51ydxu5" path="res://scenes/characterScenes/friend/clownfish.tscn" id="9_k0rs3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2pld6"]
 texture = ExtResource("1_2pld6")
@@ -26,6 +28,13 @@ texture = ExtResource("3_itpwu")
 sources/0 = SubResource("TileSetAtlasSource_k0rs3")
 
 [node name="Level1" type="Node2D" unique_id=573835046]
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=655800878]
+offset_left = 8.0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0.34509805, 0.78431374, 1)
 
 [node name="Layer1" type="TileMapLayer" parent="." unique_id=471640309]
 tile_set = SubResource("TileSet_4nq7p")
@@ -37,21 +46,17 @@ tile_set = SubResource("TileSet_5n1nj")
 tile_set = SubResource("TileSet_i0ovt")
 
 [node name="SHARK" parent="." unique_id=1527591102 instance=ExtResource("1_8crak")]
+position = Vector2(608, 376)
 
-[node name="StarfishSpawner" type="Node2D" parent="." unique_id=1826240739]
-script = ExtResource("2_2pld6")
+[node name="NemoSpawner" type="Marker2D" parent="." unique_id=503213085]
+position = Vector2(632, 184)
+script = ExtResource("8_5n1nj")
+fish_scene = ExtResource("9_k0rs3")
 
-[node name="Spawn" type="Timer" parent="StarfishSpawner" unique_id=1588298708]
-wait_time = 5.0
-autostart = true
+[node name="StarfishSpawner" type="Marker2D" parent="." unique_id=1271359621]
+position = Vector2(216, 520)
+script = ExtResource("8_g2tu2")
 
-[node name="Spawner" type="Sprite2D" parent="StarfishSpawner" unique_id=278694988]
-texture = ExtResource("3_4nq7p")
-
-[node name="LionfishSpawner" type="Node2D" parent="." unique_id=1312802400]
-
-[node name="LT" type="Timer" parent="LionfishSpawner" unique_id=1020864630]
-
-[node name="Spawner1" type="Sprite2D" parent="LionfishSpawner" unique_id=2017638345]
-
-[connection signal="timeout" from="StarfishSpawner/Spawn" to="StarfishSpawner" method="_on_spawn_timeout"]
+[node name="LionfishSpawner" type="Marker2D" parent="." unique_id=43367318]
+position = Vector2(992, 520)
+script = ExtResource("8_k0rs3")

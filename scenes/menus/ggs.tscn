@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bp80ecwyfvbdh"]
 
 [ext_resource type="Script" uid="uid://bsick3yhxoxkq" path="res://CompetitiveProgramming/mains/cp/ggs.gd" id="1_u6wpv"]
-[ext_resource type="Texture2D" uid="uid://ogww41lgdewb" path="res://scenes/almostUseless/don'tGoonToThis/icon.svg" id="2_vui1c"]
+[ext_resource type="Texture2D" uid="uid://c1k2n4lgr7rpm" path="res://assets/art/created_assets/random/hawksbill sea turtle.png" id="2_u6wpv"]
 
 [node name="GGS" type="Control" unique_id=610602403]
 layout_mode = 3
@@ -13,12 +13,24 @@ grow_vertical = 2
 script = ExtResource("1_u6wpv")
 
 [node name="Button" type="Button" parent="." unique_id=1051455432]
+self_modulate = Color(0, 0.8509804, 1, 1)
 layout_mode = 0
-offset_left = 688.0
-offset_top = 398.0
-offset_right = 3778.0
-offset_bottom = 1362.0
+offset_left = -964.0
+offset_top = -180.0
+offset_right = 2126.0
+offset_bottom = 784.0
+theme_override_font_sizes/font_size = 24
 text = "BACK TO MENU"
-icon = ExtResource("2_vui1c")
+icon = ExtResource("2_u6wpv")
+
+[node name="Label" type="Label" parent="." unique_id=826255543]
+self_modulate = Color(1, 0, 0, 1)
+layout_mode = 0
+offset_left = 188.0
+offset_top = 63.0
+offset_right = 1071.0
+offset_bottom = 142.0
+theme_override_font_sizes/font_size = 54
+text = "YOU LOST, press button to restart"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

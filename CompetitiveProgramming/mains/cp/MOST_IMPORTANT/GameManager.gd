@@ -61,7 +61,7 @@ func add_coin(increment : int):
 func spend_coin(decrement : int):
 	coin_count -= decrement
 	
-	                             
+								 
 
 
 

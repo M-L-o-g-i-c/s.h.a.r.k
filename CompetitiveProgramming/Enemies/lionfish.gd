@@ -20,18 +20,22 @@ extends CharacterBody2D
 
 
 
+class_name Lionfish
 @export var l_speed : int = 100
 var target : CharacterBody2D
-#nemo
+var is_alive : bool = true
 
+func _onready():
+	add_to_group("lionfish")
+	
 func _physics_process(_par):
+	if not is_alive: return
 	target = _finding_nemo()
-	# nemo is gonna be cooked if they eat nemo
 	if target:
 		var direction = (target.position - position).normalized()
 		#target not null
 		
-		velocity = direction * speed
+		velocity = direction * l_speed
 		move_and_slide()
 
 		#check collision
@@ -43,13 +47,13 @@ func _physics_process(_par):
 			Game.nemo_killed += 1
 		
 			if Game.nemo_target == Game.nemo_killed:
-				print("you won this level")
+				get_tree().change_scene_to_file("res://scenes/menus/ggs.tscn")
 				# to be implemented later
 
-		if velocity.x < 0 and $LionfishSprite.flip_x == true:
-			$LionfishSprite.flip_x = false
-		elif velocity.x > 0 and $LionfishSprite.flip_x == false:
-			%LionfishSprite.flip_x = true
+		if velocity.x > 0:
+			$LionfishSprite.flip_h = false
+		else:
+			$LionfishSprite.flip_h = true
 
 # nemo is kind of cooked
 
@@ -64,3 +68,7 @@ func _finding_nemo() -> CharacterBody2D:
 				min_dis = distance
 				near_nemo = idv_nemo
 	return near_nemo
+	
+func die():
+	is_alive = false
+	queue_free()

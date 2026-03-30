@@ -7,3 +7,35 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Label" type="Label" parent="." unique_id=566139103]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 137.0
+offset_right = 1927.0
+offset_bottom = 774.0
+theme_override_font_sizes/font_size = 20
+text = "“Crown of Thorns Starfish.” Great Barrier Reef Foundation, 
+www.barrierreef.org/the-reef/threats/Crown-of-thorns-starfish. 
+Accessed 30 Mar. 2026. 
+
+
+Fisheries, NOAA. “Impacts of Invasive Lionfish.” NOAA, 22 May 2025,
+ www.fisheries.noaa.gov/southeast/ecosystems/impacts-invasive-lionfish. 
+
+Conner-Simons  |  CSAIL, Adam. “Soft Robotic Fish Swims alongside Real Ones in Coral Reefs.” 
+MIT News | Massachusetts Institute of Technology, 21 Mar. 2018,
+ news.mit.edu/2018/soft-robotic-fish-swims-alongside-real-ones-coral-reefs-0321. 
+
+Seaventures-Admin. “Why Are Mangroves Important to Coral Reefs?” Seaventures Dive Rig, 22 Dec. 2024, 
+seaventuresdive.com/why-are-mangroves-important-to-coral-reefs/."
+
+[node name="Credits" type="Label" parent="." unique_id=2058513499]
+self_modulate = Color(0, 1, 1, 1)
+layout_mode = 0
+offset_left = 232.0
+offset_top = 39.0
+offset_right = 569.0
+offset_bottom = 157.0
+theme_override_font_sizes/font_size = 50
+text = "Credits TO:"
