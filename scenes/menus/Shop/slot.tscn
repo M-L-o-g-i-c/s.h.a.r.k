@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://d1dnwrrooefea"]
+
+[node name="SLOT" type="Panel" unique_id=1640245282]
+custom_minimum_size = Vector2(85, 30)
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SlotRect" type="TextureRect" parent="." unique_id=434695502]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 44.0
+offset_right = 84.0
+offset_bottom = 40.0
+
+[node name="SLOTLB" type="Label" parent="." unique_id=509029656]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 41.0
+offset_bottom = 25.0

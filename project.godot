@@ -21,8 +21,6 @@ Game="*uid://d2rswmseghtus"
 
 [display]
 
-window/size/viewport_width=3840
-window/size/viewport_height=2160
 window/size/mode=2
 
 [global_group]

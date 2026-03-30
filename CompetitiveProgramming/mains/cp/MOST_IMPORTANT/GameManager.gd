@@ -21,18 +21,20 @@ extends Node
 
 
 var coin_count : int = 0
+
+#level 1
 var starfish_killed : int = 0
 var lionfish_killed : int = 0
 const STARFISH_TARGET : int = 6
-const LIONFISH_TARGET : int =0
+const LIONFISH_TARGET : int = 0
 
-signal coin_earned()
-signal coin_gained()
+# comment signal coin_earned()
+# comment signal coin_gained()
 # gained means free money
 # everything is better when they are free
 
-signal coin_lost()
-signal coin_spent()
+#comment signal coin_lost()
+#comment signal coin_spent()
 
 
 
