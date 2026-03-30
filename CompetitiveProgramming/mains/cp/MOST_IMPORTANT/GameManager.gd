@@ -61,5 +61,11 @@ func add_coin(increment : int):
 func spend_coin(decrement : int):
 	coin_count -= decrement
 	
-	
-	
+	                             
+
+
+
+
+
+const nemo_target : int = 15
+var nemo_killed : int = 0

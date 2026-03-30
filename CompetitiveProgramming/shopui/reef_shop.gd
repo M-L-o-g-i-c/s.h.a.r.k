@@ -57,4 +57,4 @@ enum MODE {
 # flashes different colors each time +
 
 
-# CCoins stand for coral coins
+# CCoins stand for coral coins            https://www.qianwen.com/chat/8a9b9872d74543f28aea71a58410d58c 

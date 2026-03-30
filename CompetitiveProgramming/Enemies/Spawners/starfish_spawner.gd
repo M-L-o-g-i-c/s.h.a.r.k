@@ -32,3 +32,16 @@ func _on_spawn_timeout():
 		starfish_instance.position = position + Vector2(randi_range(-150, 150), randi_range(-150, 150))
 	
 		get_parent().add_child(starfish_instance)
+
+	# spawner needs a good remake https://www.qianwen.com/chat/8a9b9872d74543f28aea71a58410d58c
+
+
+
+
+
+
+
+
+                                                                     
+
+
