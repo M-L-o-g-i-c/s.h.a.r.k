@@ -100,6 +100,6 @@ func _process(_par : float):
 		#look at and follow player if player is detected
 
 func get_killed():
-	print("i geot killed")
+	print("i got killed")
 	queue_free()
 	#basically this means the enemy got cooked

@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://bsick3yhxoxkq" path="res://CompetitiveProgramming/mains/cp/ggs.gd" id="1_u6wpv"]
 [ext_resource type="Texture2D" uid="uid://c1k2n4lgr7rpm" path="res://assets/art/created_assets/random/hawksbill sea turtle.png" id="2_u6wpv"]
+[ext_resource type="Texture2D" uid="uid://d2sf0bxr5nvc4" path="res://assets/art/created_assets/OBJ/plastic/plastic 2.png" id="3_14jon"]
+[ext_resource type="Texture2D" uid="uid://dp5123aubne1o" path="res://assets/art/created_assets/OBJ/plastic/net 2.png" id="4_3mlrq"]
+[ext_resource type="Texture2D" uid="uid://b5koj4h3np21k" path="res://assets/art/created_assets/OBJ/oil/oil 4.png" id="5_qp1p5"]
 
 [node name="GGS" type="Control" unique_id=610602403]
 layout_mode = 3
@@ -14,23 +17,70 @@ script = ExtResource("1_u6wpv")
 
 [node name="Button" type="Button" parent="." unique_id=1051455432]
 self_modulate = Color(0, 0.8509804, 1, 1)
-layout_mode = 0
-offset_left = -964.0
-offset_top = -180.0
-offset_right = 2126.0
-offset_bottom = 784.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1545.0
+offset_top = -482.0
+offset_right = 1545.0
+offset_bottom = 482.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_font_sizes/font_size = 24
 text = "BACK TO MENU"
 icon = ExtResource("2_u6wpv")
 
 [node name="Label" type="Label" parent="." unique_id=826255543]
 self_modulate = Color(1, 0, 0, 1)
-layout_mode = 0
-offset_left = 188.0
-offset_top = 63.0
-offset_right = 1071.0
-offset_bottom = 142.0
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 151.0
+grow_horizontal = 2
 theme_override_font_sizes/font_size = 54
-text = "YOU LOST, press button to restart"
+text = "YOU LOST, press anywhere to return
+                   [main map]"
+
+[node name="stick" type="TextureRect" parent="." unique_id=1341283239]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.13700001
+anchor_top = 0.326
+anchor_right = 0.13700001
+anchor_bottom = 0.326
+offset_left = -57.824005
+offset_top = -54.248
+offset_right = 58.175995
+offset_bottom = 53.752
+texture = ExtResource("3_14jon")
+
+[node name="net" type="TextureRect" parent="." unique_id=556180929]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.365
+anchor_top = 0.734
+anchor_right = 0.365
+anchor_bottom = 0.734
+offset_left = -87.48001
+offset_top = -65.63202
+offset_right = 88.51999
+offset_bottom = 65.36798
+texture = ExtResource("4_3mlrq")
+
+[node name="oil" type="TextureRect" parent="." unique_id=503617982]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.78000003
+anchor_top = 0.546
+anchor_right = 0.78000003
+anchor_bottom = 0.546
+offset_left = -110.56006
+offset_top = -67.808014
+offset_right = 111.43994
+offset_bottom = 67.191986
+texture = ExtResource("5_qp1p5")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

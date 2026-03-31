@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://cw7lpyasc6ncj"]
+
+[ext_resource type="Script" uid="uid://dqx2w3vou45da" path="res://scenes/BUGUANLE/enter_text.gd" id="1_xcqoc"]
+
+[node name="EnterText" type="Control" unique_id=594362273]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xcqoc")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1403884668]
+
+[node name="Robux" type="Label" parent="CanvasLayer" unique_id=954322978]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -436.0
+offset_top = -305.0
+offset_right = 689.0
+offset_bottom = 322.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 26
+text = "As climate change pushes global temperatures to new heights, 
+scientists have explored numerous different ways to observe
+ and track marine ecosystem health.
+
+ In 2018, scientists from MIT designed SoFi,
+ a soft robotic fish capable of swimming alongside real fish for
+ up to 40 minutes. 
+
+Here in S.H.A.R.K., you will be the scientist in control
+ of your own robotic shark, but THIS TIME, 
+instead of observing, the objective is to SAVE THE REEF.
+ 
+-------------------------------------------------------------------------------------------------------
+WASD to move, [shift] to boost (attack enemy), [p] to pause"
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1700021439]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -411.0
+offset_top = -83.0
+offset_right = 411.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.039215688, 1, 0, 1)
+theme_override_font_sizes/font_size = 60
+text = "Press [spacebar] to continue"

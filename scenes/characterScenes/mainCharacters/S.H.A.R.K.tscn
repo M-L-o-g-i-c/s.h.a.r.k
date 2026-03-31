@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://cd7xkb4q3ypey"]
 
 [ext_resource type="Script" uid="uid://cp13apb4baerv" path="res://CompetitiveProgramming/characterCode/s.h.a.r.k.gd" id="1_dfyto"]
-[ext_resource type="Texture2D" uid="uid://bb0nfxhthepod" path="res://assets/art/import/char/Shark.png" id="2_hi0ta"]
+[ext_resource type="Texture2D" uid="uid://egyvormorfdo" path="res://assets/art/created_assets/ALLS/shark-ezgif.com-gif-to-sprite-converter.png" id="2_hi0ta"]
+[ext_resource type="AudioStream" uid="uid://mv7t83asjht7" path="res://assets/music/viacheslavstarostin-game-gaming-video-game-music-471936.mp3" id="3_5o24g"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c8wcv"]
 radius = 4.0
@@ -10,15 +11,115 @@ height = 13.333334
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hi0ta"]
 radius = 8.0
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_5o24g"]
+atlas = ExtResource("2_hi0ta")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fyldy"]
+atlas = ExtResource("2_hi0ta")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yo4fr"]
+atlas = ExtResource("2_hi0ta")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d7ycr"]
+atlas = ExtResource("2_hi0ta")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nnlj5"]
+atlas = ExtResource("2_hi0ta")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j8at4"]
+atlas = ExtResource("2_hi0ta")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eurpw"]
+atlas = ExtResource("2_hi0ta")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ftgas"]
+atlas = ExtResource("2_hi0ta")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s30fu"]
+atlas = ExtResource("2_hi0ta")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_05kxo"]
+atlas = ExtResource("2_hi0ta")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8mwsk"]
+atlas = ExtResource("2_hi0ta")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u3w5l"]
+atlas = ExtResource("2_hi0ta")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1704s"]
+atlas = ExtResource("2_hi0ta")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kiagw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5o24g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fyldy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yo4fr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d7ycr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nnlj5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j8at4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eurpw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ftgas")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s30fu")
+}],
+"loop": true,
+"name": &"IDLE",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_05kxo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8mwsk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u3w5l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1704s")
+}],
+"loop": true,
+"name": &"MOVE",
+"speed": 6.0
+}]
+
 [node name="SHARK" type="CharacterBody2D" unique_id=1527591102]
 scale = Vector2(2, 2)
 collision_layer = 2
 collision_mask = 373
 script = ExtResource("1_dfyto")
-
-[node name="S_Sprite" type="Sprite2D" parent="." unique_id=889460361]
-scale = Vector2(0.75, 0.75)
-texture = ExtResource("2_hi0ta")
 
 [node name="S_Shape" type="CollisionShape2D" parent="." unique_id=1391329772]
 rotation = 1.5707964
@@ -26,7 +127,6 @@ scale = Vector2(0.75, 0.75)
 shape = SubResource("CapsuleShape2D_c8wcv")
 
 [node name="SharkCamera" type="Camera2D" parent="." unique_id=36773743]
-zoom = Vector2(5, 5)
 
 [node name="DashTime" type="Timer" parent="." unique_id=1131164404]
 editor_description = "This is our player"
@@ -47,16 +147,31 @@ position = Vector2(3, -1)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_hi0ta")
 
-[node name="Calories" type="TextureProgressBar" parent="." unique_id=291758626]
-offset_right = 40.0
-offset_bottom = 40.0
-max_value = 5000.0
-value = 5000.0
-metadata/_edit_use_anchors_ = true
+[node name="AS" type="AnimatedSprite2D" parent="." unique_id=1974648068]
+sprite_frames = SubResource("SpriteFrames_kiagw")
+animation = &"MOVE"
 
-[node name="HungerTimer" type="Timer" parent="." unique_id=29691011]
+[node name="Health" type="ProgressBar" parent="." unique_id=1746517983]
+self_modulate = Color(0, 1, 0, 1)
+offset_left = -286.0
+offset_top = -159.0
+offset_right = -146.0
+offset_bottom = -132.0
+theme_override_colors/font_color = Color(0, 0.9490196, 1, 1)
+step = 1.0
+value = 100.0
+
+[node name="Label" type="Label" parent="." unique_id=1139600469]
+offset_left = -286.0
+offset_top = -158.0
+offset_right = -246.0
+offset_bottom = -135.0
+theme_override_colors/font_color = Color(0, 0, 0.46666667, 1)
+text = "HP"
+
+[node name="MusicViacheslavstarostin" type="AudioStreamPlayer" parent="." unique_id=1878368216]
+stream = ExtResource("3_5o24g")
 
 [connection signal="timeout" from="DashTime" to="." method="_on_dash_time_timeout"]
 [connection signal="timeout" from="DashCooldownTime" to="." method="_on_dash_cooldown_time_timeout"]
 [connection signal="body_entered" from="BoostAttack" to="." method="_on_boost_attack_body_entered"]
-[connection signal="timeout" from="HungerTimer" to="." method="_on_hunger_timer_timeout"]

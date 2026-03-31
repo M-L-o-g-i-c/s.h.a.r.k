@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cosxppp4uey36"]
+
+[ext_resource type="Script" uid="uid://uj6s25p6qcwh" path="res://CompetitiveProgramming/meibanfale/trash.gd" id="1_0nkxl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dum2i"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0nkxl"]
+
+[node name="Trash" type="Area2D" unique_id=123736273]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_0nkxl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=85434273]
+shape = SubResource("CircleShape2D_dum2i")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=90514094]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1344884446]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=968642304]
+shape = SubResource("CircleShape2D_0nkxl")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

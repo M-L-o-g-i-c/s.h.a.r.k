@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://dgakpgmnuu32l" path="res://CompetitiveProgramming/menus/ourmenu.gd" id="1_tlau0"]
 [ext_resource type="Texture2D" uid="uid://du063bx1yn5qc" path="res://assets/art/created_assets/bigui/start button.png" id="2_tlau0"]
 [ext_resource type="Texture2D" uid="uid://ded7ytelo2eg6" path="res://assets/art/created_assets/bigui/quit button.png" id="3_50fci"]
+[ext_resource type="Texture2D" uid="uid://b80dpf70lvtqb" path="res://assets/art/created_assets/ALLS/credits button.png" id="4_50fci"]
 
 [node name="ENT" type="Control" unique_id=1239544115]
 layout_mode = 3
@@ -24,21 +25,6 @@ grow_vertical = 2
 texture = ExtResource("1_b1oor")
 stretch_mode = 6
 
-[node name="Credits" type="Button" parent="." unique_id=1769316140]
-custom_minimum_size = Vector2(200, 100)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -100.0
-offset_top = -50.0
-offset_right = 100.0
-offset_bottom = 50.0
-grow_horizontal = 2
-grow_vertical = 2
-
 [node name="a" type="TextureRect" parent="." unique_id=121828302]
 layout_mode = 1
 anchors_preset = 5
@@ -53,10 +39,20 @@ scale = Vector2(3.5, 3.5)
 texture = ExtResource("2_tlau0")
 
 [node name="b" type="TextureRect" parent="." unique_id=1728666085]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -541.0
+offset_top = -286.0
+offset_right = -220.99997
+offset_bottom = -105.999985
+grow_horizontal = 2
+grow_vertical = 2
 scale = Vector2(3.5, 3.5)
+texture = ExtResource("4_50fci")
 
 [node name="c" type="TextureRect" parent="." unique_id=1489576134]
 layout_mode = 1
@@ -73,6 +69,21 @@ grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(3.5, 3.5)
 texture = ExtResource("3_50fci")
+
+[node name="Credits" type="Button" parent="." unique_id=1769316140]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -138.0
+offset_top = -50.0
+offset_right = 141.0
+offset_bottom = 53.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Enter" type="Button" parent="." unique_id=508620719]
 self_modulate = Color(0.57254905, 0.5058824, 0.39607844, 1)

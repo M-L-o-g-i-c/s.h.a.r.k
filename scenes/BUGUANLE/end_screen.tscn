@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://b2iqrlrc7vter"]
+
+[ext_resource type="Script" uid="uid://c8lobm8h8rg0m" path="res://scenes/BUGUANLE/end_screen.gd" id="1_bhf0k"]
+[ext_resource type="Texture2D" uid="uid://5kqcpvfop33a" path="res://assets/art/created_assets/ALLS/winning_background.png" id="1_wuscp"]
+
+[node name="EndScreen" type="Control" unique_id=1743621497]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bhf0k")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1103603741]
+layout_mode = 0
+offset_right = 1160.0
+offset_bottom = 640.0
+texture = ExtResource("1_wuscp")
+
+[node name="Label" type="Label" parent="." unique_id=1759375428]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 480.0
+offset_top = 16.0
+offset_right = 1038.0
+offset_bottom = 165.0
+theme_override_colors/font_color = Color(1.8049032e-07, 0.4538483, 5.7756904e-07, 1)
+theme_override_font_sizes/font_size = 53
+text = "thank you for playing,
+you saved us!"
+
+[node name="LastQuit" type="Button" parent="." unique_id=183891582]
+layout_mode = 0
+offset_left = 728.0
+offset_top = 368.0
+offset_right = 864.0
+offset_bottom = 424.0
+text = "QUIT GAME"
+
+[connection signal="pressed" from="LastQuit" to="." method="_on_last_quit_pressed"]

@@ -70,3 +70,35 @@ func spend_coin(decrement : int):
 const nemo_target : int = 15
 var nemo_killed : int = 0
 var passed : int = 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# below are our level 2 variables
+
+
+# goals
+const BIN_GOAL : int = 4
+const TOTAL_BINS : int = 12
+
+#amounts
+var oil_val : int = 0
+var general_val : int = 0
+var plastic_val : int = 0
+var total_val : int = 0
+
+
+
+
+#ok good
+var replayed : bool = false

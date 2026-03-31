@@ -1,11 +1,87 @@
 [gd_scene format=3 uid="uid://bjixc2ksmrt17"]
 
-[ext_resource type="Script" uid="uid://bhlwrrjrr6pfe" path="res://scenes/mainTasks/earlyStage/level_2.gd" id="1_0fqpd"]
+[ext_resource type="Script" uid="uid://cp3ea6phqyemm" path="res://scenes/BUGUANLE/lev2.gd" id="1_xsbmd"]
+[ext_resource type="Texture2D" uid="uid://brqgiabuar8k3" path="res://assets/art/created_assets/coral reef/starting page background.png" id="2_7p6w5"]
 [ext_resource type="PackedScene" uid="uid://cd7xkb4q3ypey" path="res://scenes/characterScenes/mainCharacters/S.H.A.R.K.tscn" id="2_dlarp"]
+[ext_resource type="Script" uid="uid://dprilrhlpt2pk" path="res://scenes/trash_spawner.gd" id="2_xsbmd"]
+[ext_resource type="Script" uid="uid://bavb0ynbql1ic" path="res://scenes/BUGUANLE/oil.gd" id="3_ign0p"]
+[ext_resource type="Script" uid="uid://k1m68v17s7u" path="res://scenes/BUGUANLE/general.gd" id="4_xe67j"]
+[ext_resource type="Script" uid="uid://cib6i3334rp22" path="res://scenes/BUGUANLE/plastic.gd" id="5_7p6w5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dlarp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xsbmd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ign0p"]
 
 [node name="Level2" type="Node2D" unique_id=1064622894]
-script = ExtResource("1_0fqpd")
+script = ExtResource("1_xsbmd")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2039721168]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_7p6w5")
 
 [node name="SHARK" parent="." unique_id=1527591102 instance=ExtResource("2_dlarp")]
 
-[node name="Timer" type="Timer" parent="." unique_id=1006136363]
+[node name="Oil" type="Area2D" parent="." unique_id=871400385]
+script = ExtResource("3_ign0p")
+bintype = "OIL"
+
+[node name="oilshape" type="CollisionShape2D" parent="Oil" unique_id=75598766]
+shape = SubResource("RectangleShape2D_dlarp")
+
+[node name="General" type="Area2D" parent="." unique_id=302212870]
+script = ExtResource("4_xe67j")
+bintype = "GENERAL"
+
+[node name="gshape" type="CollisionShape2D" parent="General" unique_id=1883961791]
+shape = SubResource("RectangleShape2D_xsbmd")
+
+[node name="Plastic" type="Area2D" parent="." unique_id=142433274]
+script = ExtResource("5_7p6w5")
+bintype = "PLASTIC"
+
+[node name="sshape" type="CollisionShape2D" parent="Plastic" unique_id=507830668]
+shape = SubResource("RectangleShape2D_ign0p")
+
+[node name="Logos" type="CanvasLayer" parent="." unique_id=1091066277]
+
+[node name="OilProgress" type="Label" parent="Logos" unique_id=31689131]
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 192.0
+offset_bottom = 56.0
+text = "fsfsdfsdf"
+
+[node name="GeneralProgress" type="Label" parent="Logos" unique_id=497462350]
+offset_left = 16.0
+offset_top = 64.0
+offset_right = 136.0
+offset_bottom = 112.0
+text = "something"
+
+[node name="PlasticProgress" type="Label" parent="Logos" unique_id=240242572]
+offset_left = 16.0
+offset_top = 128.0
+offset_right = 192.0
+offset_bottom = 200.0
+text = "somethinhg"
+
+[node name="ALERT" type="Label" parent="Logos" unique_id=1699987896]
+offset_left = 864.0
+offset_right = 1160.0
+offset_bottom = 112.0
+text = "time"
+
+[node name="TYPE" type="Label" parent="Logos" unique_id=865876146]
+offset_left = 840.0
+offset_top = 72.0
+offset_right = 976.0
+offset_bottom = 160.0
+text = "type"
+
+[node name="TrashSpawner" type="Marker2D" parent="." unique_id=1684584562]
+script = ExtResource("2_xsbmd")
+
+[node name="Timer" type="Timer" parent="." unique_id=1965725234]

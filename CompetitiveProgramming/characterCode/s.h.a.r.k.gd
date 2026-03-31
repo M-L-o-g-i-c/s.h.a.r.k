@@ -32,11 +32,11 @@ func basic_movement(direction : Vector2):
 	velocity = direction * SPEED
 	if direction.x < 0 and is_flipped:
 		is_flipped = not is_flipped
-		$S_Sprite.flip_h = false
+		$AS.flip_h = false
 		# flip left
 	elif direction.x > 0 and not is_flipped:
 		is_flipped = not is_flipped
-		$S_Sprite.flip_h = true
+		$AS.flip_h = true
 		
 		# flip right
 
@@ -99,18 +99,6 @@ var hunger_pause : bool = false
 
 
 
-func _on_hunger_timer_timeout():
-	hunger_pause = false
-	
-	
-func sub_calories():
-	if(abs(velocity.x) > 0 and not hunger_pause and abs(velocity.y) > 0):
-		$Calories.value -= 10
-		$HungerTimer.start()
-		hunger_pause = true
-		print($Calories.value)
-		if($Calories.value <= 0): get_tree().change_scene_to_file("res://scenes/menus/ggs.tscn")
-		
 		
 #ignore hunger for now
 
@@ -119,7 +107,9 @@ func _process(_par : float):
 	boost()
 	if is_boosting: velocity *= BOOST_MULTIPLIER
 	move_and_slide()
-	# add sub calories later
+	if abs(velocity.x) > 0 or abs(velocity.y) > 0: $AS.play("MOVE")
+	else: $AS.play("IDLE")
+	mute_check()
 
 
 
@@ -143,4 +133,18 @@ func _on_boost_attack_body_entered(body : Node2D):
 	elif body is Lionfish and not is_boosting:
 		print("loost_health")
 
-		
+
+var is_holding : bool = false
+var held_trash : String
+
+
+func _ready():
+	$MusicViacheslavstarostin.play()
+	if $MusicViacheslavstarostin.stream: $MusicViacheslavstarostin.stream.loop = true
+	
+
+func mute_check():
+	if(Input.is_action_just_pressed("mute")): AudioServer.set_bus_mute(0, not AudioServer.is_bus_mute(0))
+
+
+#this is already the quickest way to toggle mute

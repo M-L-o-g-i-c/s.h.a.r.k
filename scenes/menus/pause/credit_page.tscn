@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://d2qwjsd84hi16"]
 
+[ext_resource type="Script" uid="uid://ctokypqisepg4" path="res://scenes/BUGUANLE/credit_page.gd" id="1_cw4k0"]
+
 [node name="CreditPage" type="Control" unique_id=1201192907]
 layout_mode = 3
 anchors_preset = 15
@@ -7,13 +9,34 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_cw4k0")
 
-[node name="Label" type="Label" parent="." unique_id=566139103]
-layout_mode = 0
-offset_left = 76.0
-offset_top = 137.0
-offset_right = 1927.0
-offset_bottom = 774.0
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1052570854]
+
+[node name="Credits" type="Label" parent="CanvasLayer" unique_id=2058513499]
+self_modulate = Color(0, 1, 1, 1)
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -468.0
+offset_right = -56.0
+offset_bottom = 69.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 50
+text = "Much Credits TO:"
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=566139103]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -494.0
+offset_top = -266.0
+offset_right = 1021.0
+offset_bottom = 361.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_font_sizes/font_size = 20
 text = "“Crown of Thorns Starfish.” Great Barrier Reef Foundation, 
 www.barrierreef.org/the-reef/threats/Crown-of-thorns-starfish. 
@@ -30,12 +53,16 @@ MIT News | Massachusetts Institute of Technology, 21 Mar. 2018,
 Seaventures-Admin. “Why Are Mangroves Important to Coral Reefs?” Seaventures Dive Rig, 22 Dec. 2024, 
 seaventuresdive.com/why-are-mangroves-important-to-coral-reefs/."
 
-[node name="Credits" type="Label" parent="." unique_id=2058513499]
-self_modulate = Color(0, 1, 1, 1)
-layout_mode = 0
-offset_left = 232.0
-offset_top = 39.0
-offset_right = 569.0
-offset_bottom = 157.0
-theme_override_font_sizes/font_size = 50
-text = "Credits TO:"
+[node name="sk" type="Label" parent="CanvasLayer" unique_id=828803945]
+anchors_preset = -1
+anchor_left = 0.45700002
+anchor_top = 0.84700006
+anchor_right = 0.45700002
+anchor_bottom = 0.84700006
+offset_left = -216.46399
+offset_top = 0.14398193
+offset_right = 15.536011
+offset_bottom = 23.143982
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "PRESS [spacebar] TO GO BACK"

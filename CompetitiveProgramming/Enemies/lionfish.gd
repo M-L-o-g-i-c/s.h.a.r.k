@@ -23,7 +23,7 @@ extends CharacterBody2D
 class_name Lionfish
 
 @export var l_speed: int = 100
-@export var detection_range: float = 500.0  # 新增：检测范围
+@export var detection_range: int = 500
 var target: CharacterBody2D = null
 var is_alive: bool = true
 

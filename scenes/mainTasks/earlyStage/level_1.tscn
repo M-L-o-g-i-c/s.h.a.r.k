@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://ci31ghouubk4l" path="res://assets/art/import/tiles/Atlantis/Atlantis/Screenshot (286).png" id="1_2pld6"]
 [ext_resource type="PackedScene" uid="uid://cd7xkb4q3ypey" path="res://scenes/characterScenes/mainCharacters/S.H.A.R.K.tscn" id="1_8crak"]
+[ext_resource type="Script" uid="uid://c0khwrpovgqyy" path="res://scenes/mainTasks/earlyStage/level_1.gd" id="1_k0rs3"]
 [ext_resource type="Texture2D" uid="uid://debg48enaj45p" path="res://assets/art/import/tiles/Atlantis/Atlantis/Screenshot (285).png" id="2_3tc85"]
 [ext_resource type="Texture2D" uid="uid://dbxe64mgp7w75" path="res://assets/art/import/tiles/Atlantis/Atlantis/Screenshot (289).png" id="3_itpwu"]
 [ext_resource type="Script" uid="uid://i1pa42fi260k" path="res://CompetitiveProgramming/other/nemo_spawner.gd" id="8_5n1nj"]
@@ -24,11 +25,47 @@ sources/0 = SubResource("TileSetAtlasSource_g2tu2")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k0rs3"]
 texture = ExtResource("3_itpwu")
+15:15/0 = 0
+16:15/0 = 0
+17:15/0 = 0
+18:16/0 = 0
+19:16/0 = 0
+20:16/0 = 0
+21:16/0 = 0
+22:16/0 = 0
+23:16/0 = 0
+24:16/0 = 0
+25:16/0 = 0
+26:16/0 = 0
+27:16/0 = 0
+28:16/0 = 0
+29:16/0 = 0
+30:16/0 = 0
+31:16/0 = 0
+32:16/0 = 0
+33:16/0 = 0
+34:16/0 = 0
+35:16/0 = 0
+36:16/0 = 0
+50:17/0 = 0
+50:18/0 = 0
+50:19/0 = 0
+51:19/0 = 0
+51:20/0 = 0
+52:20/0 = 0
+53:20/0 = 0
+54:20/0 = 0
+55:19/0 = 0
+55:18/0 = 0
+54:18/0 = 0
+54:19/0 = 0
+53:19/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_i0ovt"]
 sources/0 = SubResource("TileSetAtlasSource_k0rs3")
 
 [node name="Level1" type="Node2D" unique_id=573835046]
+script = ExtResource("1_k0rs3")
 metadata/_edit_lock_ = true
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=655800878]
@@ -62,3 +99,5 @@ script = ExtResource("8_g2tu2")
 position = Vector2(992, 520)
 script = ExtResource("8_k0rs3")
 lionfish_scene = ExtResource("9_5n1nj")
+
+[node name="Timer" type="Timer" parent="." unique_id=281237012]

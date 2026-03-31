@@ -7,10 +7,9 @@
 [node name="MainGame" type="Node2D" unique_id=1036642697]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=886730953]
-offset_left = -36.0
-offset_top = -103.0
-offset_right = 1398.0
-offset_bottom = 924.0
+offset_left = 2.0
+offset_right = 1436.0
+offset_bottom = 1027.0
 texture = ExtResource("1_0wfyh")
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=1417046697]
@@ -18,7 +17,14 @@ texture = ExtResource("1_0wfyh")
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1174599739]
 
 [node name="Tp1" parent="." unique_id=838727701 instance=ExtResource("1_sugp2")]
-position = Vector2(730, 141)
+position = Vector2(949, 325)
 
 [node name="SHARK" parent="." unique_id=1527591102 instance=ExtResource("1_o5qli")]
-position = Vector2(244, 104)
+position = Vector2(579, 330)
+
+[node name="CL" type="CanvasLayer" parent="." unique_id=668193886]
+
+[node name="Enters" type="Label" parent="CL" unique_id=2088975193]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0.3019608, 0, 1, 1)
