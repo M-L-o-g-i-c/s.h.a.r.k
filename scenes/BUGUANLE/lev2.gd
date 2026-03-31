@@ -65,3 +65,7 @@ func _update_label():
 	$Logos/PlasticProgress.text = str(Game.plastic_val) + "/4"
 	$Logos/TYPE.text = $SHARK.is_holding
 	
+
+
+func _on_timer_timeout() -> void:
+	get_tree().change_scene_to_file("res://scenes/BUGUANLE/end_screen.tscn")

@@ -85,3 +85,6 @@ text = "type"
 script = ExtResource("2_xsbmd")
 
 [node name="Timer" type="Timer" parent="." unique_id=1965725234]
+wait_time = 10.144
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
