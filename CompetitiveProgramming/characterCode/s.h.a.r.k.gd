@@ -87,7 +87,7 @@ func _on_dash_cooldown_time_timeout():
 	
 	
 	
-var hunger_pause : bool = false;
+var hunger_pause : bool = false
 #every 0.5 seconds decrease by 25	
 	
 	
@@ -128,10 +128,19 @@ func _on_boost_attack_body_entered(body : Node2D):
 		is_boosting = false
 		if(body.has_method("get_killed")):
 			Game.starfish_killed += 1
-			print(Game.starfish_killed)
 			body.get_killed()
-			if Game.starfish_killed==Game.STARFISH_TARGET:
+			if Game.starfish_killed == Game.STARFISH_TARGET:
 				get_tree().change_scene_to_file("res://scenes/main.tscn")
-		
+	elif body is Starfish and not is_boosting:
+		print("loose health")
+	if body is Lionfish and is_boosting:
+		is_boosting = false
+		if(body.has_method("die")):
+			Game.lionfish_killed += 1
+			body.die()
+			if Game.lionfish_killed == Game.LIONFISH_TARGET:
+				get_tree().change_scene_to_file("res://scenes/main.tscn")
+	elif body is Lionfish and not is_boosting:
+		print("loost_health")
 
 		

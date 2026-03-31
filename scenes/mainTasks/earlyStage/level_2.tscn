@@ -1,17 +1,11 @@
 [gd_scene format=3 uid="uid://bjixc2ksmrt17"]
 
 [ext_resource type="Script" uid="uid://bhlwrrjrr6pfe" path="res://scenes/mainTasks/earlyStage/level_2.gd" id="1_0fqpd"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0fqpd"]
+[ext_resource type="PackedScene" uid="uid://cd7xkb4q3ypey" path="res://scenes/characterScenes/mainCharacters/S.H.A.R.K.tscn" id="2_dlarp"]
 
 [node name="Level2" type="Node2D" unique_id=1064622894]
 script = ExtResource("1_0fqpd")
 
-[node name="Lessons" type="Node" parent="." unique_id=1622670723]
+[node name="SHARK" parent="." unique_id=1527591102 instance=ExtResource("2_dlarp")]
 
-[node name="Leak1" type="Area2D" parent="Lessons" unique_id=893819749]
-
-[node name="Sprite1" type="Sprite2D" parent="Lessons/Leak1" unique_id=643106828]
-
-[node name="Coll1" type="CollisionShape2D" parent="Lessons/Leak1" unique_id=1102269558]
-shape = SubResource("RectangleShape2D_0fqpd")
+[node name="Timer" type="Timer" parent="." unique_id=1006136363]

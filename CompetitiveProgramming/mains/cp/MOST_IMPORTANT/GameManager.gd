@@ -69,3 +69,4 @@ func spend_coin(decrement : int):
 
 const nemo_target : int = 15
 var nemo_killed : int = 0
+var passed : int = 0

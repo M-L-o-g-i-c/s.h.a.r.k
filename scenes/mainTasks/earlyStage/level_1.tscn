@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://i1pa42fi260k" path="res://CompetitiveProgramming/other/nemo_spawner.gd" id="8_5n1nj"]
 [ext_resource type="Script" uid="uid://buwkgrf6rw3yc" path="res://scenes/BUGUANLE/starfish_spawner.gd" id="8_g2tu2"]
 [ext_resource type="Script" uid="uid://b0a50uaejlneq" path="res://scenes/BUGUANLE/lionfish_spawner.gd" id="8_k0rs3"]
+[ext_resource type="PackedScene" uid="uid://d0lrffhuauqrq" path="res://scenes/characterScenes/enemies/lionfish.tscn" id="9_5n1nj"]
 [ext_resource type="PackedScene" uid="uid://b8j2ra51ydxu5" path="res://scenes/characterScenes/friend/clownfish.tscn" id="9_k0rs3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2pld6"]
@@ -60,3 +61,4 @@ script = ExtResource("8_g2tu2")
 [node name="LionfishSpawner" type="Marker2D" parent="." unique_id=43367318]
 position = Vector2(992, 520)
 script = ExtResource("8_k0rs3")
+lionfish_scene = ExtResource("9_5n1nj")
