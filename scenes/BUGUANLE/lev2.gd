@@ -63,7 +63,7 @@ func _update_label():
 	$Logos/OilProgress.text = str(Game.oil_val) + "/4"
 	$Logos/GeneralProgress.text = str(Game.general_val) + "/4"
 	$Logos/PlasticProgress.text = str(Game.plastic_val) + "/4"
-	$Logos/TYPE.text = $SHARK.is_holding
+	$Logos/TYPE.text = $SHARK.held_item
 	
 
 

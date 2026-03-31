@@ -101,6 +101,7 @@ script = ExtResource("8_k0rs3")
 lionfish_scene = ExtResource("9_5n1nj")
 
 [node name="Timer" type="Timer" parent="." unique_id=281237012]
-wait_time = 10.0
+wait_time = 5.0
+autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

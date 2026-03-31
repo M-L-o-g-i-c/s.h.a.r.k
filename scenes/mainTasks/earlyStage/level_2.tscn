@@ -52,27 +52,27 @@ offset_left = 16.0
 offset_top = 8.0
 offset_right = 192.0
 offset_bottom = 56.0
-text = "fsfsdfsdf"
+text = "progress"
 
 [node name="GeneralProgress" type="Label" parent="Logos" unique_id=497462350]
 offset_left = 16.0
 offset_top = 64.0
 offset_right = 136.0
 offset_bottom = 112.0
-text = "something"
+text = "gen"
 
 [node name="PlasticProgress" type="Label" parent="Logos" unique_id=240242572]
 offset_left = 16.0
 offset_top = 128.0
 offset_right = 192.0
 offset_bottom = 200.0
-text = "somethinhg"
+text = "p"
 
 [node name="ALERT" type="Label" parent="Logos" unique_id=1699987896]
 offset_left = 864.0
 offset_right = 1160.0
 offset_bottom = 112.0
-text = "time"
+text = "a"
 
 [node name="TYPE" type="Label" parent="Logos" unique_id=865876146]
 offset_left = 840.0
@@ -85,6 +85,7 @@ text = "type"
 script = ExtResource("2_xsbmd")
 
 [node name="Timer" type="Timer" parent="." unique_id=1965725234]
-wait_time = 10.144
+wait_time = 5.0
+autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
